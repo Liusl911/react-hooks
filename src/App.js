@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import LikeButton from './components/LikeButton';
-import DogShow from './components/DogShow';
 import MouseTracker from './components/MouseTracker';
 import useMousePosition from './hooks/useMousePosition';
+import CatShowWithHook from './components/CatShowWithHook';
 
 function App() {
   const position = useMousePosition()
@@ -12,8 +12,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>{position.x}</h1>
+        <CatShowWithHook />
         <MouseTracker />
-        <DogShow />
         <LikeButton />
         <a
           className="App-link"
