@@ -5,11 +5,15 @@ import MouseTracker from './components/MouseTracker';
 import useMousePosition from './hooks/useMousePosition';
 import CatShowWithHook from './components/CatShowWithHook';
 
+import Footer from './components/Footer'
+import AddTodo from './containers/AddTodo'
+import VisibleTodoList from './containers/VisibleTodoList'
+
 function App() {
   const position = useMousePosition()
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>{position.x}</h1>
         <CatShowWithHook />
@@ -23,7 +27,10 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <AddTodo />
+      <VisibleTodoList />
+      <Footer />
     </div>
   );
 }
