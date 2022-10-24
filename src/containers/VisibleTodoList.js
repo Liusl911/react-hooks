@@ -4,7 +4,9 @@ import store from '../store'
 import TodoList from '../components/TodoList'
 
 // init
-store.dispatch(initTodoList([{ id: 999, text: '王宝钏挖野菜', completed: false }]))
+setTimeout(() => {
+    store.dispatch(initTodoList([{ id: 999, text: '王宝钏挖野菜', completed: false }]))
+}, 800);
 
 const getVisibleTodos = (todos, filter) => {
     switch (filter) {
